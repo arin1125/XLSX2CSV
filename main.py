@@ -5,15 +5,8 @@ import pandas as pd
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QComboBox
 
-class MyTableWidget(QtWidgets.QTableWidget):
-    def __init__(self, parent=None):
-        super().__init__(parent)
 
-    def wheelEvent(self, event):
-        if QtWidgets.QApplication.keyboardModifiers() == QtCore.Qt.ControlModifier:
-            self.horizontalScrollBar().event(event)
-        else:
-            super().wheelEvent(event)
+from module.TableWidget import MyTableWidget
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
