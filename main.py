@@ -33,19 +33,19 @@ class MainWindow(QtWidgets.QMainWindow):
 
         # 코드 모듈화 진행
         self.file_select_button = QtWidgets.QPushButton("파일 선택")
-        self.file_select_button.clicked.connect(lambda: on_file_select_button_clicked)
+        self.file_select_button.clicked.connect(lambda: on_file_select_button_clicked(self))
 
         self.convert_button = QtWidgets.QPushButton("변환")
-        self.convert_button.clicked.connect(lambda: on_convert_button_clicked)
+        self.convert_button.clicked.connect(lambda: on_convert_button_clicked(self))
 
         self.all_convert_button = QtWidgets.QPushButton("모든파일 변환")
-        self.all_convert_button.clicked.connect(lambda: on_all_convert_button_clicked)
+        self.all_convert_button.clicked.connect(lambda: on_all_convert_button_clicked(self))
 
         self.delete_button = QtWidgets.QPushButton("삭제")
-        self.delete_button.clicked.connect(lambda: on_delete_button_clicked)
+        self.delete_button.clicked.connect(lambda: on_delete_button_clicked(self))
 
         self.all_delete_button = QtWidgets.QPushButton("모든파일 삭제")
-        self.all_delete_button.clicked.connect(lambda: on_all_delete_button_clicked)
+        self.all_delete_button.clicked.connect(lambda: on_all_delete_button_clicked(self))
 
         self.label = QtWidgets.QLabel()
 
